@@ -1,186 +1,250 @@
-```html
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Personal | Odajiu Felicia</title>
+    <title>CV Profesional | Odajiu Felicia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #fdfcfe;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .profile-border {
-            border: 4px solid #fff;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
         }
 
-        .hobby-tag {
-            transition: all 0.3s ease;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #8b5cf6;
+            border-radius: 2px;
         }
 
-        .hobby-tag:hover {
-            transform: translateY(-5px);
-            background: #6366f1;
-            color: white;
+        .timeline-item {
+            border-left: 2px solid #e2e8f0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #8b5cf6;
+        }
+
+        .contact-pill {
+            transition: all 0.2s ease;
+        }
+
+        .contact-pill:hover {
+            transform: scale(1.02);
+            background: #f1f5f9;
         }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="text-slate-800 antialiased">
 
-    <div class="min-h-screen py-10 px-4 md:px-0">
-        <div class="max-w-4xl mx-auto">
+    <div class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
             
-            <!-- Header Section -->
-            <header class="glass-card rounded-3xl p-8 md:p-12 mb-8 shadow-xl text-center md:text-left flex flex-col md:flex-row items-center gap-8">
-                <div class="relative">
-                    <!-- Avatar Placeholder using SVG -->
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-indigo-100 flex items-center justify-center profile-border overflow-hidden">
-                        <svg class="w-20 h-20 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <div class="absolute bottom-2 right-2 bg-green-500 w-5 h-5 rounded-full border-4 border-white"></div>
-                </div>
+            <!-- Header Section with Contact Info -->
+            <header class="glass-card rounded-[2rem] p-8 md:p-12 mb-8 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 gradient-bg opacity-10 rounded-bl-full"></div>
                 
-                <div class="flex-1">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-2 gradient-text">Odajiu Felicia</h1>
-                    <p class="text-xl text-slate-500 font-medium mb-4 italic">Elevă în clasa a XII-a</p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-semibold">
-                        <span class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full border border-indigo-100 flex items-center">
-                            <i class="fas fa-calendar-alt mr-2"></i> 22 Ianuarie 2007
-                        </span>
-                        <span class="bg-purple-50 text-purple-700 px-4 py-2 rounded-full border border-purple-100 flex items-center">
-                            <i class="fas fa-moon mr-2"></i> Capricorn
-                        </span>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="relative">
+                        <div class="w-32 h-32 md:w-44 md:h-44 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 p-1 shadow-2xl">
+                            <div class="w-full h-full bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                                <svg class="w-24 h-24 text-slate-200" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left flex-1">
+                        <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-gradient">Odajiu Felicia</h1>
+                        <p class="text-lg font-medium text-slate-500 mb-6 tracking-wide uppercase">Elevă în clasa a XII-a</p>
+                        
+                        <!-- Contact Details Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <a href="tel:+37360876569" class="contact-pill bg-white/50 px-4 py-2 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fas fa-phone text-indigo-500"></i>
+                                <span class="font-semibold">+373 608 765 69</span>
+                            </a>
+                            <a href="mailto:odajiufelicia21@gmail.com" class="contact-pill bg-white/50 px-4 py-2 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fas fa-envelope text-purple-500"></i>
+                                <span class="font-semibold">odajiufelicia21@gmail.com</span>
+                            </a>
+                            <div class="contact-pill bg-white/50 px-4 py-2 rounded-xl border border-slate-100 flex items-center gap-3 sm:col-span-2">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                                <span class="font-semibold">Strada Ion Creangă 80, Chișinău</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
-                <!-- Left Column: Info -->
-                <div class="space-y-8">
-                    <section class="glass-card rounded-3xl p-8 shadow-lg">
-                        <h2 class="text-xl font-bold mb-6 flex items-center text-indigo-600">
-                            <i class="fas fa-user-circle mr-3"></i> Profil
-                        </h2>
-                        <ul class="space-y-4">
-                            <li class="flex flex-col">
-                                <span class="text-xs text-slate-400 uppercase tracking-widest">Educație</span>
-                                <span class="font-semibold">Elevă în faza terminală de liceu</span>
-                            </li>
-                            <li class="flex flex-col">
-                                <span class="text-xs text-slate-400 uppercase tracking-widest">Data Nașterii</span>
-                                <span class="font-semibold">22.01.2007</span>
-                            </li>
-                            <li class="flex flex-col">
-                                <span class="text-xs text-slate-400 uppercase tracking-widest">Semn Zodiacal</span>
-                                <span class="font-semibold">Capricorn</span>
-                            </li>
-                        </ul>
+                <!-- Sidebar -->
+                <div class="lg:col-span-4 space-y-8">
+                    <!-- Despre Mine -->
+                    <section class="glass-card rounded-3xl p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-4 section-title">Despre mine</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sunt o persoană curioasă, plină de energie şi mereu dornică să învăț lucruri noi. Îmi place să cânt, să dansez şi să mă distrez alături de prieteni. Sunt prietenoasă şi deschisă, căutând mereu experiențe interesante care să mă inspire în dezvoltarea mea personală.
+                        </p>
                     </section>
 
-                    <section class="glass-card rounded-3xl p-8 shadow-lg">
-                        <h2 class="text-xl font-bold mb-6 flex items-center text-indigo-600">
-                            <i class="fas fa-share-alt mr-3"></i> Social
-                        </h2>
-                        <div class="flex gap-4">
-                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-indigo-600 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-indigo-600 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-indigo-600 hover:text-white transition-all"><i class="fas fa-envelope"></i></a>
+                    <!-- Limbi -->
+                    <section class="glass-card rounded-3xl p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-4 section-title">Limbi vorbite</h2>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Română</span>
+                                <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded font-bold italic">NATALĂ</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Engleză</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold">B2</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Rusă</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold">B1</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Info Personală -->
+                    <section class="glass-card rounded-3xl p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-4 section-title">Detalii</h2>
+                        <div class="space-y-2 text-sm">
+                            <p class="flex justify-between"><span class="text-slate-500">Născută:</span> <span class="font-semibold">22.01.2007</span></p>
+                            <p class="flex justify-between"><span class="text-slate-500">Zodie:</span> <span class="font-semibold text-indigo-600">Capricorn</span></p>
                         </div>
                     </section>
                 </div>
 
-                <!-- Right Column: Preferences & Content -->
-                <div class="md:col-span-2 space-y-8">
-                    <section class="glass-card rounded-3xl p-8 md:p-10 shadow-lg">
-                        <h2 class="text-2xl font-bold mb-8 flex items-center text-indigo-600 border-b pb-4">
-                            <i class="fas fa-heart mr-3"></i> Interese și Preferințe
+                <!-- Main Content -->
+                <div class="lg:col-span-8 space-y-8">
+                    
+                    <!-- Educație -->
+                    <section class="glass-card rounded-3xl p-8 shadow-sm">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fas fa-graduation-cap text-indigo-500"></i> Educație
                         </h2>
-                        
-                        <p class="text-slate-600 leading-relaxed mb-8">
-                            Sunt o persoană creativă și sociabilă, aflată la început de drum, pasionată de frumos și de valorile familiei. Îmi place să explorez lumea prin artă și lectură.
-                        </p>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="hobby-tag bg-white border border-slate-100 p-4 rounded-2xl shadow-sm flex items-center">
-                                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-book-open"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold">Lectură</h3>
-                                    <p class="text-xs text-slate-500">Să privesc cărți</p>
-                                </div>
+                        <div class="space-y-8">
+                            <div class="timeline-item">
+                                <span class="text-indigo-600 font-bold text-sm">2023 — 2026</span>
+                                <h3 class="text-lg font-bold">Liceul Teoretic "Mihai Marinciuc"</h3>
+                                <p class="text-slate-500 text-sm">Strada Ion Pelivan 30/2, Chișinău</p>
                             </div>
-
-                            <div class="hobby-tag bg-white border border-slate-100 p-4 rounded-2xl shadow-sm flex items-center">
-                                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-microphone-alt"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold">Muzică</h3>
-                                    <p class="text-xs text-slate-500">Să cânt</p>
-                                </div>
-                            </div>
-
-                            <div class="hobby-tag bg-white border border-slate-100 p-4 rounded-2xl shadow-sm flex items-center">
-                                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-walking"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold">Dans</h3>
-                                    <p class="text-xs text-slate-500">Să dansez</p>
-                                </div>
-                            </div>
-
-                            <div class="hobby-tag bg-white border border-slate-100 p-4 rounded-2xl shadow-sm flex items-center">
-                                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold">Familie</h3>
-                                    <p class="text-xs text-slate-500">Timpul liber împreună</p>
-                                </div>
+                            <div class="timeline-item">
+                                <span class="text-indigo-600 font-bold text-sm">2018 — 2023</span>
+                                <h3 class="text-lg font-bold">Gimnaziul "Mihai Eminescu"</h3>
+                                <p class="text-slate-500 text-sm">Raionul Cantemir, Satul Baimaclia</p>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Quote / Inspiration Section -->
-                    <section class="bg-indigo-600 rounded-3xl p-8 shadow-lg text-white relative overflow-hidden">
-                        <i class="fas fa-quote-right absolute top-4 right-4 text-white/10 text-6xl"></i>
-                        <h3 class="text-lg font-semibold mb-2 opacity-90">Motto personal</h3>
-                        <p class="text-xl italic">"Viața este frumoasă atunci când o petreci făcând lucrurile care îți plac alături de cei dragi."</p>
+                    <!-- Experiență -->
+                    <section class="glass-card rounded-3xl p-8 shadow-sm">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fas fa-award text-purple-500"></i> Experiență și Concursuri
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-indigo-50/50 rounded-2xl p-5 border border-indigo-100">
+                                <h3 class="font-bold text-indigo-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-star"></i> Performanță în Dans
+                                </h3>
+                                <p class="text-sm font-semibold text-indigo-700">Participare la concursuri NAȚIONALE de dans</p>
+                                <p class="text-xs text-slate-500 mt-1 italic">Reprezentarea instituțiilor de învățământ la nivel artistic înalt.</p>
+                            </div>
+
+                            <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100">
+                                <h3 class="font-bold text-slate-700 mb-3 flex items-center gap-2 text-sm uppercase tracking-wider">
+                                    Participare la Concursuri (2018-2023)
+                                </h3>
+                                <ul class="text-sm text-slate-600 space-y-2">
+                                    <li>• Concursuri artistice (muzică, dans)</li>
+                                    <li>• Concursuri şcolare (literatură, dezbateri, ştiinţe)</li>
+                                    <li>• Competiții de creativitate</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100">
+                                <h3 class="font-bold text-emerald-700 mb-3 flex items-center gap-2 text-sm uppercase tracking-wider">
+                                    Voluntariat și Implicare
+                                </h3>
+                                <p class="text-sm text-slate-600">Organizarea activităților recreative, evenimente caritabile și cluburi școlare (teatru, dans).</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Aptitudini Grid -->
+                    <section>
+                        <h2 class="text-xl font-bold mb-4 px-2">Aptitudini Cheie</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="bg-white border border-slate-100 p-4 rounded-2xl text-center shadow-sm">
+                                <span class="block text-xs font-bold text-slate-400 mb-1 uppercase">Social</span>
+                                <p class="font-bold text-sm">Prietenoasă</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 p-4 rounded-2xl text-center shadow-sm">
+                                <span class="block text-xs font-bold text-slate-400 mb-1 uppercase">Artă</span>
+                                <p class="font-bold text-sm">Creativă</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 p-4 rounded-2xl text-center shadow-sm">
+                                <span class="block text-xs font-bold text-slate-400 mb-1 uppercase">Muncă</span>
+                                <p class="font-bold text-sm">Organizată</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 p-4 rounded-2xl text-center shadow-sm">
+                                <span class="block text-xs font-bold text-slate-400 mb-1 uppercase">Spirit</span>
+                                <p class="font-bold text-sm">Curioasă</p>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
 
-            <!-- Footer -->
-            <footer class="mt-12 text-center text-slate-400 text-sm">
-                <p>&copy; 2024 CV Personal - Odajiu Felicia. Creat cu drag.</p>
+            <footer class="mt-12 text-center pb-8">
+                <p class="text-slate-400 text-xs">Portofoliu creat pentru Odajiu Felicia • 2026</p>
             </footer>
         </div>
     </div>
 
 </body>
 </html>
-
-```
